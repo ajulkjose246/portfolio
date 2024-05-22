@@ -13938,7 +13938,7 @@ a:hover {
   margin: 0 0 2rem 0;
   overflow: hidden;
   position: relative;
-  color: #ffffff;
+  color: var(--text-color);
 }
 
 .postcard.dark {
