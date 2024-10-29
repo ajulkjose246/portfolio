@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>App Store</title>
+    <link rel="shortcut icon" href="https://www.yudaah.com/demo/play-store-template/assets/images/fav.png"
+        type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.yudaah.com/demo/play-store-template/assets/images/fav.jpg">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="css/appStyle.css" />
+    <style>
+        .screenshot {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+
+        #imageModal .modal-dialog {
+            max-width: 350px;
+        }
+
+        #modalImage {
+            transition: transform 0.3s;
+        }
+
+    
+
+        #imageModal .btn-close {
+            background-color: white;
+            opacity: 0.8;
+            z-index: 1;
+        }
+    </style>
+</head>
+<div class="main-content" style="margin-left: 0; width: 100%;">
+    <div class="nav-bar sticky-top-xl shadow-sm w-100 p-3" style="background-color: #e4e9f7;">
+        <div class="row align-items-center">
+            <div class="col-md-2">
+                <a href="store.html" class="text-decoration-none">
+                    <h1 class="mb-0 fw-bold" style="color: #333; font-size: 24px;">App Store</h1>
+                </a>
+            </div>
+            <div class="col-md-6 offset-md-2">
+                <div class="input-group mb-0">
+                    <input type="text" class="form-control border-end-0 mb-0" placeholder="Search Apps"
+                        aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <span class="input-group-text sit border-start-0" id="basic-addon2"><i
+                            class="bi bi-search"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-container p-2 p-xl-4">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <!-- App Header Card -->
+                <div class="row rounded-3 overflow-hidden mx-1 border shadow-sm" style="background-color: white; border-radius: 16px !important;">
+                    <div class="col-md-3 p-4 d-flex align-items-center justify-content-center">
+                        <img class="w-75 rounded-3" src="assets/apps/ajce_trips.png" alt="AJCE TRIPS">
+                    </div>
+                    <div class="col-md-9 p-4 text-center text-md-start">
+                        <h2 class="fw-bold mb-3 text-primary">AJCE TRIPS</h2>
+
+                        <div class="d-flex gap-3 mb-4 justify-content-center justify-content-md-start">
+                            <a href="https://github.com/ajulkjose246/InstHelper/releases/download/v1.6.4/InstHelper-1.6.4.apk"
+                                class="btn btn-primary px-4 fw-semibold py-2 rounded-pill">
+                                <i class="bi bi-download me-2"></i>Download
+                            </a>
+                            <button class="btn btn-primary px-4 fw-semibold py-2 rounded-pill"
+                                onclick="toggleVersions()">
+                                <i class="bi bi-download me-2"></i>Older versions
+                            </button>
+
+                        </div>
+
+                        <div id="versions-list" class="bg-light rounded-3 p-3 mb-4" style="display: none;">
+                            <h5 class="fw-bold mb-3">Available Versions</h5>
+                            <div class="list-group">
+                                <a href="https://github.com/ajulkjose246/InstHelper/releases/download/v1.6.4/InstHelper-1.6.4.apk"
+                                    class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                    Version 1.6.4
+                                    <span class="badge bg-primary rounded-pill">Latest</span>
+                                </a>
+                                <a href="https://github.com/ajulkjose246/InstHelper/releases/download/v1.6.0/InstHelper-1.6.0.apk"
+                                    class="list-group-item list-group-item-action">Version 1.6.0</a>
+                                <a href="https://github.com/ajulkjose246/InstHelper/releases/download/v1.5.6/1.5.6.apk"
+                                    class="list-group-item list-group-item-action">Version 1.5.6</a>
+                                <a href="https://github.com/ajulkjose246/InstHelper/releases/download/InstHelper/InstHelper-1.3.1.apk"
+                                    class="list-group-item list-group-item-action">Version 1.3.1</a>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="p-4 rounded-3 mx-1">
+                                <h4 class="fw-bold mb-3 text-center">
+                                    <i class="bi bi-info-circle me-2 text-primary"></i>About this App
+                                </h4>
+                                <p class="text-muted lh-lg">
+                                    AJCETRIPS is an advanced platform designed to enhance college campus operations through
+                                    smart
+                                    automation and modern technology integration. This app includes a dedicated College
+                                    Vehicle
+                                    Management module tailored for college staff, enabling drivers to efficiently manage
+                                    crucial
+                                    vehicle information such as insurance status, test dates, maintenance schedules, and
+                                    trip
+                                    details.
+    
+                                    With AJCETRIPS, college administrators and drivers can keep college-owned vehicles
+                                    organized and
+                                    in optimal condition, ensuring seamless operation for campus needs. From tracking
+                                    maintenance to
+                                    logging trips, AJCETRIPS is the essential tool for efficient and streamlined vehicle
+                                    management
+                                    on campus.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Move these sections outside the previous row and create a new row -->
+                <div class="row mt-4">
+                    
+                    <div class="col-md-12">
+                        <div class="p-4 rounded-3 mx-1">
+                            <h4 class="fw-bold mb-4 text-center">
+                                <i class="bi bi-images me-2 text-primary"></i>Screenshots
+                            </h4>
+                            <div class="screenshot-container">
+                                <div class="screenshot-scroll">
+                                    <img src="assets/screenshots/ajce_trips_1.png" alt="Screenshot 1"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_2.png" alt="Screenshot 2"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_3.png" alt="Screenshot 3"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_4.png" alt="Screenshot 3"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_5.png" alt="Screenshot 3"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_6.png" alt="Screenshot 3"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_7.png" alt="Screenshot 3"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_8.png" alt="Screenshot 4"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_9.png" alt="Screenshot 4"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_10.png" alt="Screenshot 4"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                    <img src="assets/screenshots/ajce_trips_11.png" alt="Screenshot 4"
+                                        class="screenshot" onclick="showImage(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <!-- Add this modal markup just before closing body tag -->
+    <div id="imageModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="btn-close position-absolute end-0 top-0 m-2"
+                        data-bs-dismiss="modal"></button>
+                    <img id="modalImage" src="" class="w-100" alt="Screenshot">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="https://www.yudaah.com/demo/play-store-template/assets/js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/appScript.js"></script>
+
+<script>
+    function toggleVersions() {
+        const versionsList = document.getElementById('versions-list');
+        versionsList.style.display = versionsList.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function showImage(src) {
+        document.getElementById('modalImage').src = src;
+        new bootstrap.Modal(document.getElementById('imageModal')).show();
+    }
+</script>
+
+</html>
